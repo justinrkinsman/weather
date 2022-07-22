@@ -1,0 +1,1 @@
+{"version":3,"file":"main.js","mappings":";;;;;AAAA,mF","sources":["webpack://weather/./src/index.js"],"sourcesContent":["document.querySelector('button').addEventListener('click', () => console.log('Hi'))"],"names":[],"sourceRoot":""}
