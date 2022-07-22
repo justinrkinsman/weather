@@ -4,4 +4,6 @@ fetch('https://api.openweathermap.org/data/2.5/weather?q=Halifax&APPID=da9add490
     })
     .then(function(response) {
         console.log(response)
+        console.log(response.name + ", " + response.sys.country)
+        console.log(`Current Temp: ${response.main.temp - 273.15}`)
     })
