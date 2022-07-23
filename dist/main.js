@@ -19,6 +19,11 @@ window.addEventListener('load', () => {
         console.log(response.weather[0].icon)
         console.log(response.weather[0].id)
         img.src = `http://openweathermap.org/img/wn/${response.weather[0].icon}@2x.png`
+        if (response.weather[0].main === 'Clouds'){
+            document.body.classList.toggle('clouds')
+        }else if (response.weather[0].main === 'Clear'){
+            document.body.classList.toggle('clear')
+        }
     /*    fetch(`http://openweathermap.org/img/wn/${response.weather[0].icon}@2x.png`, {mode: 'cors'})
 .then(function(response) {
     return response.json();
@@ -47,6 +52,11 @@ fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city.value}&APPID=da9
         console.log(response.weather[0].icon)
         console.log(response.weather[0].id)
         img.src = `http://openweathermap.org/img/wn/${response.weather[0].icon}@2x.png`
+        if (response.weather[0].main === 'Clouds'){
+            document.body.classList.toggle('clouds')
+        }else if (response.weather[0].main === 'Clear'){
+            document.body.classList.toggle('clear')
+        }
     /*    fetch(`https://api.giphy.com/v1/gifs/translate?api_key=T9MZvkuHdTIWdpKEiUvT8fur5A2JESV1&s=${response.weather[0].main}`, {mode: 'cors'})
 .then(function(response) {
     return response.json();

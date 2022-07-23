@@ -1,12 +1,9 @@
-body {
-    background-color: skyblue;
-}
-
-button {
+.clear {
     background-color: aqua;
     border-style: none;
 }
 
-input {
-    background-color: aqua;
+.clouds {
+    background-color: grey;
+    border-style: none;
 }
