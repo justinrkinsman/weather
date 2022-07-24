@@ -1,9 +1,19 @@
-.clear {
+.weather-clear {
     background-color: aqua;
     border-style: none;
 }
 
-.clouds {
+.weather-clouds {
     background-color: grey;
+    border-style: none;
+}
+
+.weather-snow {
+    background-color: antiquewhite;
+    border-style: none;
+}
+
+.weather-sand {
+    background-color: sandybrown;
     border-style: none;
 }

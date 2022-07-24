@@ -19,10 +19,23 @@ window.addEventListener('load', () => {
         console.log(response.weather[0].icon)
         console.log(response.weather[0].id)
         img.src = `http://openweathermap.org/img/wn/${response.weather[0].icon}@2x.png`
-        if (response.weather[0].main === 'Clouds'){
-            document.body.classList.toggle('clouds')
+        if (response.weather[0].main === 'Clouds' || response.weather[0].main === "Rain" || 
+        response.weather[0].main === "Drizzle" || response.weather[0].main === "Thunderstorm" || 
+        response.weather[0].main === "Mist" || response.weather[0].main === "Smoke" || 
+        response.weather[0].main === "Haze" || response.weather[0].main === "Dust" ||
+        response.weather[0].main === "Fog" || response.weather[0].main === "Ash" ||
+        response.weather[0].main === "Squall" || response.weather[0].main === "Tornado"){
+            document.body.classList = ""
+            document.body.classList.add('weather-clouds')
         }else if (response.weather[0].main === 'Clear'){
-            document.body.classList.toggle('clear')
+            document.body.classList = ""
+            document.body.classList.add('weather-clear')
+        }else if (response.weather[0].main === 'Snow'){
+            document.body.classList = ""
+            document.body.classList.add('weather-snow')
+        }else if (response.weather[0].main === 'Sand'){
+            document.body.classList = ""
+            document.body.classList.add('weather-sand')
         }
     /*    fetch(`http://openweathermap.org/img/wn/${response.weather[0].icon}@2x.png`, {mode: 'cors'})
 .then(function(response) {
@@ -52,10 +65,24 @@ fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city.value}&APPID=da9
         console.log(response.weather[0].icon)
         console.log(response.weather[0].id)
         img.src = `http://openweathermap.org/img/wn/${response.weather[0].icon}@2x.png`
-        if (response.weather[0].main === 'Clouds'){
-            document.body.classList.toggle('clouds')
+        document.body.classList = ""
+        if (response.weather[0].main === 'Clouds' || response.weather[0].main === "Rain" || 
+        response.weather[0].main === "Drizzle" || response.weather[0].main === "Thunderstorm" || 
+        response.weather[0].main === "Mist" || response.weather[0].main === "Smoke" || 
+        response.weather[0].main === "Haze" || response.weather[0].main === "Dust" ||
+        response.weather[0].main === "Fog" || response.weather[0].main === "Ash" ||
+        response.weather[0].main === "Squall" || response.weather[0].main === "Tornado"){
+            document.body.classList = ""
+            document.body.classList.add('weather-clouds')
         }else if (response.weather[0].main === 'Clear'){
-            document.body.classList.toggle('clear')
+            document.body.classList = ""
+            document.body.classList.add('weather-clear')
+        }else if (response.weather[0].main === 'Snow'){
+            document.body.classList = ""
+            document.body.classList.add('weather-snow')
+        }else if (response.weather[0].main === 'Sand'){
+            document.body.classList = ""
+            document.body.classList.add('weather-sand')
         }
     /*    fetch(`https://api.giphy.com/v1/gifs/translate?api_key=T9MZvkuHdTIWdpKEiUvT8fur5A2JESV1&s=${response.weather[0].main}`, {mode: 'cors'})
 .then(function(response) {
