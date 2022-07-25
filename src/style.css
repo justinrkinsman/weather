@@ -1,11 +1,29 @@
 .weather-clear {
     background-color: aqua;
+}
+
+.weather-clear-btn {
+    background-color: #ec6e4c;
     border-style: none;
+    border-radius: 12px;
+}
+
+.weather-clear-input {
+    background-color: #dcec4c;
 }
 
 .weather-clouds {
     background-color: grey;
+}
+
+.weather-clouds-btn {
+    background-color: rgb(179, 175, 175);
     border-style: none;
+    border-radius: 12px;
+}
+
+.weather-clouds-input {
+    background-color: rgb(196, 195, 195);
 }
 
 .weather-snow {

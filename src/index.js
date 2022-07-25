@@ -1,3 +1,7 @@
+let converter = document.getElementById('converter')
+let city = document.getElementById('city')
+let submit = document.getElementById('btn')
+
 window.addEventListener('load', () => {
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=Bathurst,CA&APPID=da9add490059445074b78ded2c4fa995`, {mode: 'cors'})
     .then(function(response){
@@ -22,15 +26,39 @@ window.addEventListener('load', () => {
         response.weather[0].main === "Squall" || response.weather[0].main === "Tornado"){
             document.body.classList = ""
             document.body.classList.add('weather-clouds')
+            converter.classList = ""
+            converter.classList = 'weather-clouds-btn'
+            city.classList = ""
+            city.classList = 'weather-clouds-input'
+            submit.classList = ''
+            submit.classList = 'weather-clouds-btn'
         }else if (response.weather[0].main === 'Clear'){
             document.body.classList = ""
-            document.body.classList.add('weather-clear')
+            document.body.classList = 'weather-clear'
+            converter.classList = ""
+            converter.classList = 'weather-clear-btn'
+            city.classList = ""
+            city.classList = 'weather-clear-input'
+            submit.classList = ''
+            submit.classList = 'weather-clear-btn'
         }else if (response.weather[0].main === 'Snow'){
             document.body.classList = ""
-            document.body.classList.add('weather-snow')
+            document.body.classList = 'weather-snow'
+            converter.classList = ""
+            converter.classList = 'weather-snow-btn'
+            city.classList = ""
+            city.classList = 'weather-snow-input'
+            submit.classList = ''
+            submit.classList = 'weather-snow-btn'
         }else if (response.weather[0].main === 'Sand'){
             document.body.classList = ""
             document.body.classList.add('weather-sand')
+            converter.classList = ""
+            converter.classList = 'weather-sand-btn'
+            city.classList = ""
+            city.classList = 'weather-sand-input'
+            submit.classList = ''
+            submit.classList = 'weather-sand-btn'
         }
     /*    fetch(`http://openweathermap.org/img/wn/${response.weather[0].icon}@2x.png`, {mode: 'cors'})
 .then(function(response) {
@@ -42,7 +70,6 @@ window.addEventListener('load', () => {
 })
 })
 
-let city = document.getElementById('city')
 let img = document.getElementById('image')
 
 document.getElementById('btn').addEventListener('click', () => {
@@ -69,15 +96,39 @@ fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city.value}&APPID=da9
         response.weather[0].main === "Squall" || response.weather[0].main === "Tornado"){
             document.body.classList = ""
             document.body.classList.add('weather-clouds')
+            converter.classList = ""
+            converter.classList = 'weather-clouds-btn'
+            city.classList = ""
+            city.classList = 'weather-clouds-input'
+            submit.classList = ''
+            submit.classList = 'weather-cloud-btn'
         }else if (response.weather[0].main === 'Clear'){
             document.body.classList = ""
             document.body.classList.add('weather-clear')
+            converter.classList = ""
+            converter.classList = 'weather-clear-btn'
+            city.classList = ""
+            city.classList = 'weather-clear-input'
+            submit.classList = ''
+            submit.classList = 'weather-clear-btn'
         }else if (response.weather[0].main === 'Snow'){
             document.body.classList = ""
             document.body.classList.add('weather-snow')
+            converter.classList = ""
+            converter.classList = 'weather-snow-btn'
+            city.classList = ""
+            city.classList = 'weather-snow-input'
+            submit.classList = ''
+            submit.classList = 'weather-snow-btn'
         }else if (response.weather[0].main === 'Sand'){
             document.body.classList = ""
-            document.body.classList.add('weather-sand')
+            document.body.classList = 'weather-sand'
+            converter.classList = ""
+            converter.classList = 'weather-sand-btn'
+            city.classList = ""
+            city.classList = 'weather-sand-input'
+            submit.classList = ''
+            submit.classList = 'weather-sand-btn'
         }
     /*    fetch(`https://api.giphy.com/v1/gifs/translate?api_key=T9MZvkuHdTIWdpKEiUvT8fur5A2JESV1&s=${response.weather[0].main}`, {mode: 'cors'})
 .then(function(response) {
